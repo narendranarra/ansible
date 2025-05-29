@@ -6,9 +6,9 @@
      ansible.builtin.debug:
       msg: "playing the team play1"
 
-   - name: print message play 2
-     hosts: frontend
-     tasks:
-      - name: Tis is new 
-        ansible.builtin.debug:
-         msg: "This is just kidding"
+- name: print message play 2
+  hosts: frontend
+  tasks:
+  - name: Tis is new 
+    ansible.builtin.debug:
+     msg: "This is just kidding"
