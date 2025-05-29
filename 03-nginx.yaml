@@ -15,5 +15,5 @@
 
   - name: to print the message
     ansible.builtin.debug:
-    msg: "we have installed and started and run the nginx service"
+     msg: "we have installed and started and run the nginx service"
   
