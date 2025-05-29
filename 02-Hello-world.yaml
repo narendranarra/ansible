@@ -1,7 +1,8 @@
 - name: Hello World
   hosts: local
-  connection: local # no need of username and password
+  connection: local #it will not ask username and password
   tasks:
   - name: print hello World
     ansible.builtin.debug:
      msg: "Hello World"
+     
