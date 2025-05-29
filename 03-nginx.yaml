@@ -11,6 +11,9 @@
     ansible.builtin.service:
      name: nginx
      state: started
-     enabled: no
- 
+     enabled: yes
+
+  - name: to print the message
+    ansible.builtin.debug:
+    msg: "we have installed and started and run the nginx service"
   
