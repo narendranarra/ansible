@@ -1,0 +1,14 @@
+- name: multi play
+  hosts: local
+  connection: local
+  tasks:
+   - name: print message play1
+     ansible.builtin.debug:
+      msg: "playing the team play1"
+
+   - name: print message play 2
+     hosts: frontend
+     tasks:
+      - name: Tis is new 
+        ansible.builtin.debug:
+         msg: "This is just kidding"
