@@ -7,6 +7,7 @@
       msg: "playing the team play1"
 
 - name: multi play  
+  become: yes
   hosts: frontend 
   tasks:
   - name: print message play2
