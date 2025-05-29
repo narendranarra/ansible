@@ -1,8 +1,12 @@
 - name: Hello World
-  hosts: local
-  connection: local #it will not ask username and password
+  hosts: localhost
   tasks:
-  - name: print hello World
-    ansible.builtin.debug:
-     msg: "Hello World"
-     
+    - name: Print Hello World
+      ansible.builtin.debug:
+        msg: "Hello World"    
+    - name: print new Hello World
+      ansible.builtin.debug:
+       msg: "This is Narendra"
+    - name: print wife status
+      ansible.builtin.debug:
+       msg: "my wife is happy"
