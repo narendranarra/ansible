@@ -1,11 +1,22 @@
-- name: uninstll nginx
+- name: install nginx
   hosts: frontend
-  become: yes
+  become: yes 
   tasks:
-   - name: remove nginx package
+   - name: nginx package install
      ansible.builtin.package:
-       name: nginx
-       state: absent
-   - name: print wife status
+      name: nginx
+      state: present
+
+   - name: start nginx service
+     ansible.builtin.service:
+      name: nginx
+      state: started
+
+   - name: enble the nginx service
+     ansible.builtin.service:
+      name: nginx
+      enable: yes
+
+   - name : print the message
      ansible.builtin.debug:
-      msg: "my wife is happy"
+      msg: "nginx is sucessfully enabled"
