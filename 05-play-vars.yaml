@@ -1,6 +1,5 @@
 - name: working with the variables
   hosts: frontend
-  become: yes
   vars: 
    COURSE: ansible
    DURATION: 10hrs
