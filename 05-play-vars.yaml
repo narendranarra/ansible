@@ -1,5 +1,6 @@
 - name: working with the variables
   hosts: frontend
+  become: yes
   vars: 
    COURSE: ansible
    DURATION: 10hrs
@@ -8,4 +9,3 @@
    - name: print the message
      ansible.builtin.debug:
       msg: "Hello, course is {{ COURSE }}, duration is {{ DURATION }}, trainer is {{ TRAINER }}"
-    
