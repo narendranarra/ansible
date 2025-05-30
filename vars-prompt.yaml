@@ -1,13 +1,12 @@
 - name: print the variables
-  hosts: local
-  connection: local
+  hosts: inventory.ini
   vars_prompt:
   - name: USERNAME
     prompt: enter the username
     private: true
 
   - name: PASSWORD
-    prompt: enter the passwordt
+    prompt: enter the password
     private: true
   
   tasks:
