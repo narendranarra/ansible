@@ -6,3 +6,6 @@
      ansible.builtin.package:
        name: nginx
        state: absent
+   - name: print wife status
+     ansible.builtin.debug:
+      msg: "my wife is happy"
