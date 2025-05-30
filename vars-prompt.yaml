@@ -3,7 +3,7 @@
   connection: local
   vars_prompt:
    - name: USERNAME
-     promot: please enter username
+     prompt: please enter username
      private: true
 
    - name: PASSWORD
