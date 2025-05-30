@@ -1,14 +1,12 @@
-- name: nginx install and run 
+- name: uninstll nginx
   hosts: frontend
   become: yes
   tasks:
-  - name: install nginx server
-    ansible.builtin.package:
-     name: nginx
-     state: present
+   - name: remove nginx package
+     ansible.builtin.package:
+       name: nginx
+       state: absent
 
-  - name: start nginx server 
-    ansible.builtin.service:
-     name: nginx
-     state: started
-     enabled: yes 
+   - name: print the message 
+     ansible.builtin.dubug:
+      msg: "nginix is uninsalled"
