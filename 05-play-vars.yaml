@@ -1,11 +1,11 @@
-- name: play with the variables
-  hosts: local
-  connection: local
-  vars:
-   COURSE: Ansible # equal to COURSE= Ansible in shell, we refer $VAR or ${VAR}
-   DURATION: 10 hrs
-   TRAINER: Sivakumar
+- name: working with the variables
+  hosts: frontend
+  vars: 
+   COURSE: ansible
+   DURATION: 10hrs
+   TRAINER: narendra
   tasks:
-  - name: print course information
-    ansible.builtin.debug:
-     msg: "Hello {{ COURSE }}, cource {{ DURATION }}, triner {{ TRAINER }}"
+   - name: print the message
+     ansible.builtin.debug:
+      msg: "Hello, course is {{ COURSE }}, duration is {{ DURATION }}, trainer is {{ TRAINER }}"
+    
