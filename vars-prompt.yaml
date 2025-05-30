@@ -4,8 +4,8 @@
   vars_prompt:
   - name: USERNAME
     prompt: enter the username
-    proivate: true
-    
+    private: true
+
   - name: PASSWORD
     prompt: enter the passwordt
     private: true
