@@ -6,6 +6,6 @@
    DURATION: 10 hrs
    TRAINER: Sivakumar
    tasks:
-    - name: print course information
-      ansible.builtin.debug:
-       msg: "Hello {{ COURCE }}, cource {{ DURATION }}, triner {{ TRAINER }}"
+   - name: print course information
+     ansible.builtin.debug:
+      msg: "Hello {{ COURCE }}, cource {{ DURATION }}, triner {{ TRAINER }}"
