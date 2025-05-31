@@ -1,6 +1,6 @@
 - name: conditions in ansible
   hosts: local
-  connections: local
+  connection: local
   vars:
    NUMBER: 39
   tasks:
@@ -14,4 +14,4 @@
      msg: "The number is less than 100"
     when: NUMBER < 100
 
-    
+
