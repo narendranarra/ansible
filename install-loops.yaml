@@ -1,0 +1,16 @@
+- name: install packages
+  hosts: frontend
+  become: yes
+  tasks:
+  - name: install
+    ansible.builtin.package:
+     name: "{{ item }}"
+     state: installed
+     loop:
+     - nginx
+     - httpd
+     - mysql
+     - zip
+  - name: print the message
+    ansible builtin.debug:
+     msg: "sucessfully Installed: {{ item }}"
