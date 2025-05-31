@@ -1,0 +1,13 @@
+- name: conditions in yaml
+  hosts: lfrontend
+  become: yes
+  tasks:
+  - name: install nginix if os is RedHat
+    ansible.builtin.dnf:
+     msg: "The OS is RedHat, so install nginix"
+    when: ansible_os_family == "RedHat"
+
+  - name: install nginx if os is Debian
+    ansible.builtin.apt:
+     msg: "The OS is Debian, so install nginx"
+    when: ansible_os_family == "Debian"
