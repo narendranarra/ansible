@@ -1,5 +1,5 @@
 - name: install nginx using facts
-  hosts: fronend
+  hosts: frontend
   become: yes
   tasks:
   - name: install nginx in RedHat
