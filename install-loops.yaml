@@ -17,9 +17,3 @@
      name: nginx
      state: started
      enabled: true  
-     
-  - name: start httpd 
-    ansible.builtin.service:
-     name: mysql
-     state: started
-     enabled: true
