@@ -1,21 +1,16 @@
-- name : install ngingx gathering facts
-  hosts: frontend
+- name: install nginx using facts
+  hosts: fronend
   become: yes
   tasks:
-  - name: install nginx if os is redhat
+  - name: install nginx in RedHat
     ansible.builtin.dnf:
      name: nginx
      state: present
-    when: ansible_os_family == " RedHat "
+    when: ansible_os_family == "Redhat"
 
-  - name: install nginx if os is debian
+  - name: install nginx in Debian
     ansible.builtin.apt:
      name: nginx
      state: present
-    when: ansible_os_family == " Debian "
-
-  - name: start nginx service
-    ansible.builtin.service:
-     name: nginx
-     state: stopped
-     enabled: yes
+    when: ansible_os_family == "Debian"
+    
