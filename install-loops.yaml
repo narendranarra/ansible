@@ -11,6 +11,3 @@
      - httpd
      - mysql
      - zip
-  - name: print the message
-    ansible builtin.debug:
-     msg: "sucessfully Installed: {{ item }}"
