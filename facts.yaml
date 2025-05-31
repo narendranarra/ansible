@@ -13,3 +13,7 @@
      name: nginx
      state: present 
     when: ansible_os_family == "Debian"
+
+  - name: nginx is installed
+    ansible.builtin.debug:
+     msg: "We have installed nginx"
