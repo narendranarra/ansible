@@ -1,16 +1,15 @@
-- name: install nginx using facts
+- name: playbook control using ansible facts
   hosts: frontend
   become: yes
   tasks:
-  - name: install nginx in RedHat
+  - name: install nginx if os is redhat
     ansible.builtin.dnf:
-     name: nginx
-     state: present
-    when: ansible_os_family == "Redhat"
+    - name: nginx
+      state: present
+    when: ansible_os_family == "RedHat"
 
-  - name: install nginx in Debian
+  - name: install nginx if os is debian
     ansible.builtin.apt:
-     name: nginx
-     state: present
+    - name: nginx
+      state: present
     when: ansible_os_family == "Debian"
-    
