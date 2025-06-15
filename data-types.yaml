@@ -5,7 +5,7 @@
    DURATION: 120 hrs
    COURSE: "DevsecOps with AWS"
    IS_LIVE: true
-   Tools:
+   TOOLS:
    - Linux
    - Shell Scripting
    - ansible
@@ -17,4 +17,4 @@
   tasks:
   - name: print course information
     ansible.builtin.debug:
-    msg: " course is: {{COURSE}}, durations is: {{DURATION}}, is live: {{IS_LIVE}}, tools are: {{Tools}}, concepts are: {{CONCEPTS}}""
+     msg: " course is: {{COURSE}}, durations is: {{DURATION}}, is live: {{IS_LIVE}}, tools are: {{TOOLS}}, concepts are: {{CONCEPTS}}"
