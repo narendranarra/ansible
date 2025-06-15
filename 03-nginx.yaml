@@ -1,18 +1,18 @@
 - name: install nginx
-  hosts: frontend
-  become: yes 
+  hosts: backend
+  become: yes
   tasks:
-   - name: nginx package install
-     ansible.builtin.package:
-      name: nginx
-      state: present
+  - name: installing nginx 
+    ansible.builtin.package:
+     name: nginx
+     state: present
 
-   - name: start nginx service
-     ansible.builtin.service:
-      name: nginx
-      state: started
-      enabled: yes
-      
-   - name : print the message
-     ansible.builtin.debug:
-      msg: "nginx is sucessfully enabled"
+  - name: start the nginx
+    ansible.builtin.service:
+     name: nginx
+     state: started
+
+  - name: enable the nginx
+    ansible.builtin.service:
+     name: nginx
+     enabled: yes
