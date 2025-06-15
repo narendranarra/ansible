@@ -1,15 +1,16 @@
-- name: print the variables
-  hosts: inventory.ini
+- name: print the vars_prompt
+  hosts: local
+  connection: local
   vars_prompt:
-  - name: USERNAME
-    prompt: enter the username
-    private: true
+   - name: USERNAME
+     prompt: "enter username"
+     private: true
 
-  - name: PASSWORD
-    prompt: enter the password
-    private: true
-  
+   - name: PASSWORD
+     prompt: "enter password"
+     private: false
+     
   tasks:
-  - name: printer the user information
+  - name: enter the username and password
     ansible.builtin.debug:
-     msg: "Hello world: enter username {{ USERNAME }}, enter password {{ PASSWORD }}"
+     msg: "username is: {{USERNAME}}, password is: {{PASSWORD}}"
