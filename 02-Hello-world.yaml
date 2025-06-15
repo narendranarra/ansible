@@ -1,12 +1,10 @@
-- name: Hello World
-  hosts: localhost
-  tasks:
-    - name: Print Hello World
-      ansible.builtin.debug:
-        msg: "Hello World"    
-    - name: print new Hello World
-      ansible.builtin.debug:
-       msg: "This is Narendra"
-    - name: print wife status
-      ansible.builtin.debug:
-       msg: "my wife is happy"
+- name: Hello world
+  hosts: local
+  connection: local
+  tasks: 
+  - name: print the message
+    ansible.builtin.debug:
+     msg: "Hello This is Narendra"
+  - name: print text
+    ansible.builtin.debug:
+     msg: "This is Anu:"
