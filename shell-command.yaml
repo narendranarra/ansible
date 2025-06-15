@@ -4,4 +4,4 @@
   tasks: 
   - name: redirect ls output
     #ansible.builtin.shell: " ls -ltr > /tmp/ls.txt "
-    ansible.builtin.command: " ls -ltr > /tmp/narra.txt "
+    ansible.builtin.command: " ls "
