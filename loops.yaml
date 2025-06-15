@@ -4,8 +4,8 @@
   tasks:
   - name: install nginx
     ansible.builtin.package:
-     name: "{{ item_name }}"
-     state: "{{ item_state }}"
+     name: "{{ item.name }}"
+     state: "{{ item.state }}"
     loop:
     - { name: nginx, state: present }
     - { name: httpd, state: absent } 
