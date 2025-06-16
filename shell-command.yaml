@@ -3,5 +3,10 @@
   connection: local
   tasks: 
   - name: redirect ls output
-    #ansible.builtin.shell: " ls -ltr > /tmp/ls.txt "
-    ansible.builtin.command: " ls "
+    ansible.builtin.shell: " ls -ltr > /tmp/ls.txt "
+    #ansible.builtin.command: " ls "
+    register: command_output
+
+  - name: print the outcome
+    ansible.builtin.debug:
+     msg: "{{ command_output }}"
